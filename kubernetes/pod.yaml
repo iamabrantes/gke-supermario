@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: supermario-pod
+spec:
+  containers:
+  - name: supermario-container
+    image: bharathshetty4/supermario
+    ports:
+    - containerPort: 8080
