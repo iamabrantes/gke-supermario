@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: supermario-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: supermario
+  template:
+    metadata:
+      labels:
+        app: supermario
+    spec:
+      containers:
+      - name: supermario-container
+        image: bharathshetty4/supermario
+        ports:
+        - containerPort: 8080
